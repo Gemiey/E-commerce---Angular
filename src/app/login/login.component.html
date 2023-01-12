@@ -1,0 +1,32 @@
+<div class="body">
+<h2 class="title"><span style="color:#6C63FF;">You</span>Topia</h2>
+<form  #f="ngForm" >
+  <div class="emailtitle">Email*</div>
+  <div class="email">
+  <input ngModel  name="email" type="email " class="email-field" placeholder="" style="border:none" required email>
+</div>
+<div class="passwordtitle">Password*</div>
+<div class="password">
+  <input ngModel name="password" type="password " class="password-field" placeholder="" style="border:none"required minlength="6">
+  <mat-icon style="margin-top:10px;">visibility</mat-icon>
+
+</div>  
+<p class = "forgot">Forgot your <span style="color:#6C63FF;cursor:pointer;">Password</span></p>
+
+  <button class="login-btn" [disabled]="f.invalid"><nav><a routerLink="/landing"> Login </a></nav><router-outlet></router-outlet></button>
+</form></div>
+
+<div class="leftside">
+  <img  class="logo" [src]="logologin">
+    <div class="header-one">Pay Online
+      <span style="color:white">,<br>with a simple tap!</span>
+    </div>
+
+    <div class="header-two">Unlimited
+      <span style="color:white"><br>Customisation</span>
+    </div>
+
+    <div class="header-three">Pay all over
+      <span style="color:white"><br>the world!</span>
+    </div>
+</div>

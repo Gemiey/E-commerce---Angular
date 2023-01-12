@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="left-side">
+    <img [src]="whiskas">
+<button routerLink="/landing">&#8592;
+    back to list</button>
+  </div>
+  <div class="right-side">
+    <span class="hotsale">HOTSALE</span>
+    <h1>Whiskas® Dry Adult Dewasa 7+, Cat food Rasa Mackerel</h1>
+    <div class="review">
+        <span class="catfood">CAT FOOD&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+        <span class="fa fa-star checked" style="width:11px;height:11px;"></span>&nbsp;&nbsp;&nbsp;
+        <span class="fa fa-star checked"style="width:11px;height:11px;"></span>&nbsp;&nbsp;&nbsp;
+        <span class="fa fa-star checked"style="width:11px;height:11px;"></span>&nbsp;&nbsp;&nbsp;
+        <span class="fa fa-star checked"style="width:11px;height:11px;"></span>&nbsp;&nbsp;&nbsp;
+        <span class="fa fa-star checked"style="width:11px;height:11px;"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span style="color: black">4.9 (2130 reviews)</span>
+    </div>
+    <p class="description"><span style="font-weight:bold">Description:</span>Makanan yang lengkap dan seimbang, dengan 41 nutrisi penting.
+        Mengandung antioksidan (vitamin E dan selenium) untuk sistem kekebalan tubuh yang sehat.
+        Mengandung serat untuk memperlancar pencernaan dan meningkatkan kesehatan usus.
+        Diperkaya dengan kalsium, fosfor dan vitamin D untuk tulang yang sehat.</p>
+    <div class="versions"></div>
+    <div class="sizes"><span style="font-weight:bold">Sizes:</span>
+        <button (click)="enableDisableRule()" [ngClass]="{'enabled' : toggle, 'disabled': !toggle}">1.5kg</button>
+        <button (click)="enableDisableRule()" [ngClass]="{'enabled' : toggle, 'disabled': !toggle}">1.5kg</button>
+        <button (click)="enableDisableRule()" [ngClass]="{'enabled' : toggle, 'disabled': !toggle}">500gr</button>
+        <button (click)="enableDisableRule()" [ngClass]="{'enabled' : toggle, 'disabled': !toggle}">250gr</button>
+    </div>
+    <div class="ingredients"><span style="font-weight:bold">Ingredients:</span>
+        <li>Nutrisi</li>
+        <li>Vitamin E</li>
+        <li>Protein</li>
+    </div>
+    <div class="add">
+        <div class="img">    <img [src]="whiskassmall">
+        </div>
+        <div class="product"><span>Whiskas® Dry Adult Dewasa 7+, Cat food Rasa Mackerel</span><p class="catfood" style="margin-left:-300px;">CAT FOOD</p></div>
+        <div class="purchase" style="margin-left:500px;">
+            <span>Qty:</span>
+            <button class="decrement" (click)="decrement()">-</button>
+            <div class="number-display">
+                {{counter}}
+            </div>
+            <button class="increment"(click)="increment()">+</button>
+            
+            <button class="addtocart"(click)="addItem()" routerLink="/landing" ><span>ADD TO CART</span></button>
+        </div>
+    </div>    
+  </div>
